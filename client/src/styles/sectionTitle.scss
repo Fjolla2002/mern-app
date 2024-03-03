@@ -1,0 +1,51 @@
+@import "variables";
+
+.section-title {
+    color: $text-white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+
+    .number {
+        position: absolute;
+        opacity: 0.3;
+        font-size: 12rem;
+        font-weight: 700;
+        left: -5rem;
+        bottom: 7.5rem;
+    }
+
+    .title-up {
+        position: relative;
+        color: $primary-yellow;
+        text-transform: uppercase;
+        font-family: 'Sans serif';
+        font-size: 1rem;
+        letter-spacing: 5px;
+        z-index: 100;
+
+        &::before {
+            content: "";
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 1.875rem;
+            width: 4rem;
+            height: 2px; 
+            background-color: $primary-yellow;
+        }
+    }
+
+    .title {
+        z-index: 100;
+        font-size: 4rem;
+        text-transform: capitalize;
+        font-family: $basic-font;
+        font-weight: 400;
+        letter-spacing: 3px;
+        margin: 1.875rem 0;
+    }
+}
+

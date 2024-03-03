@@ -1,0 +1,32 @@
+@import "variables";
+
+.banner {
+    position: relative;
+    background-image: url("../assets//images/banner-img.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(11, 29, 38, 0.7);
+    }
+
+    .banner-content {
+        width: 65%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 100;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
