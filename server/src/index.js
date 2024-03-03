@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import connect from ".//db/mongo.js";
+import config from "./config.js";
 
 ( async() => {
     const app = express();
@@ -14,7 +15,7 @@ import connect from ".//db/mongo.js";
 
     await connect();
 
-    app.listen(8080, () => {
-        console.log(`Server is running on port 8080`);
+    app.listen(config.PORT, () => {
+        console.log(`Server is running on port ${config.PORT}`);
     })
 })();
